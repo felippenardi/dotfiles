@@ -29,3 +29,6 @@ for file in $dir/*; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+# download vim plugins installed by pathogen
+git submodule update --init ~/$dir/
