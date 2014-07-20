@@ -28,7 +28,6 @@ for file in $files; do
     mv ~/.$file ~/dotfiles_old/
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
+    echo "$file ...done"
 done
 
-# download vim plugins installed by pathogen
-git submodule update --init ~/$dir/
