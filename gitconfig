@@ -1,0 +1,24 @@
+[user]
+  name = Felippe Nardi
+  email = felippe@nardi.me
+[credential]
+  helper = cache --timeout=360000
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = vim
+[diff]
+  tool = vimdiff
+[merge]
+  tool = vimdiff
+[difftool]
+  prompt = false
+[color]
+  ui = true
+[alias]
+  lol = log --graph --decorate --pretty=tformat:'%C(blue)%h%Creset%C(yellow bold)%d%Creset %s %C(green)(%ar)%Creset %C(cyan)%an%Creset'
+  st = status
+  co = checkout
+  br = branch
+  ci = commit
+  a = add
+  last = log -n 1 --
