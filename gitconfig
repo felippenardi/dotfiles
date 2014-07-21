@@ -22,3 +22,5 @@
   ci = commit
   a = add
   last = log -n 1 --
+[help]
+	autocorrect = 1
