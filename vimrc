@@ -38,6 +38,9 @@ autocmd FileType ruby setlocal sw=2 ts=2 sts=2
 " Enable omnicompletion (to use, hold Ctrl+X then Ctrl+O while in Insert mode.
 set ofu=syntaxcomplete#Complete
 
+" Enable spell check on commit message
+autocmd BufNewFile,BufRead COMMIT_EDITMSG set spell
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 03. Theme/Colors                                                           "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
