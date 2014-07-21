@@ -21,6 +21,7 @@
 *.swp
 *.sw*
 *.orig
+*.netrwhist
 
 # Compiled source #
 ###################
