@@ -114,6 +114,12 @@ nnoremap <C-j> <C-x>
 " Enable paste respecting identation
 set pastetoggle=<F2>
 
+
+" Moving selection                                                                                                                                                              
+xmap <C-k> :mo'<-- <CR> gv
+xmap <C-j> :mo'>+ <CR> gv
+
+
 " Make Vim built-in explorer cool enough so I don't have to use NERDTree
 " Toggle Vexplore with Ctrl-E
 function! ToggleVExplorer()
@@ -143,5 +149,4 @@ let g:netrw_altv = 1
 let g:netrw_liststyle=3
 " Change directory to the current buffer when opening files.
 set autochdir
-
 
