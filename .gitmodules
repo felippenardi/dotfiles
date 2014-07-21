@@ -4,3 +4,6 @@
 [submodule "vim/bundle/vim-rsi"]
 	path = vim/bundle/vim-rsi
 	url = https://github.com/tpope/vim-rsi.git
+[submodule "/home/nardi/dotfiles/vim/bundle/vim-airline"]
+	path = /home/nardi/dotfiles/vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
