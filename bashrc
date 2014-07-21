@@ -1,3 +1,5 @@
+export TERM=xterm-256color
+
 #Prompt and prompt colors
 # 30m - Black
 # 31m - Red
