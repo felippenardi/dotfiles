@@ -102,6 +102,11 @@ set nowrap                " don't wrap text
 command PrettyJSON %!python -m json.tool
 
 
+" Easily increase and decrease next number with ctrl+k and ctrl+j
+nnoremap <C-k> <C-a>
+nnoremap <C-j> <C-x>
+
+
 " Make Vim built-in explorer cool enough so I don't have to use NERDTree
 " Toggle Vexplore with Ctrl-E
 function! ToggleVExplorer()
