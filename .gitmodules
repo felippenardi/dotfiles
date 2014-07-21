@@ -7,3 +7,6 @@
 [submodule "/home/nardi/dotfiles/vim/bundle/vim-airline"]
 	path = /home/nardi/dotfiles/vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline.git
+[submodule "vim/bundle/vim-gitgutter"]
+	path = vim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
