@@ -84,6 +84,7 @@ set incsearch             " But do highlight as you type your search.
 set ruler                 " Always show info along bottom.
 set showmatch
 set visualbell
+let g:airline#extensions#tabline#enabled = 1 " Vim-airline smarter tab line
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 05. Text Formatting/Layout                                                 "
