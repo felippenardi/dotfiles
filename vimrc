@@ -24,7 +24,7 @@ set nocompatible         " get rid of Vi compatibility mode. SET FIRST!
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 02. Events                                                                 "
 " Initiate pathogen before enabling filetype detection
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -42,8 +42,8 @@ set ofu=syntaxcomplete#Complete
 " 03. Theme/Colors                                                           "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set t_Co=256              " enable 256-color mode.
-" syntax enable             " enable syntax highlighting (previously syntax on).
-colorscheme molokai       " set colorscheme
+syntax enable             " enable syntax highlighting (previously syntax on).
+" colorscheme molokai       " set colorscheme
 
 " Prettify JSON files
 autocmd BufRead,BufNewFile *.json set filetype=json
