@@ -109,6 +109,8 @@ command PrettyJSON %!python -m json.tool
 nnoremap <C-k> <C-a>
 nnoremap <C-j> <C-x>
 
+" Enable paste respecting identation
+set pastetoggle=<F2>
 
 " Make Vim built-in explorer cool enough so I don't have to use NERDTree
 " Toggle Vexplore with Ctrl-E
