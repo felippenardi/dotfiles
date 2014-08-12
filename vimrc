@@ -103,10 +103,6 @@ set nowrap                " don't wrap text
 " 06. Custom Commands                                                        "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Prettify JSON files making them easier to read
-command PrettyJSON %!python -m json.tool
-
-
 " Easily increase and decrease next number with ctrl+k and ctrl+j
 nnoremap <C-k> <C-a>
 nnoremap <C-j> <C-x>
