@@ -1,6 +1,7 @@
 # Custom files
 ###################
 *.todo
+*.wtf
 
 # Ruby version. TODO remove it
 ###################
