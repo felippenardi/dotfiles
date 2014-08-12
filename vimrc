@@ -4,7 +4,7 @@
 "        URL: http://github.com/felippenardi/dotfiles                        "
 "                                                                            "
 "   Based_on: Michael J. Smalley <michaeljsmalley@gmail.com>                 "
-"        URL: http://github.com/michaeljsmalley/dotfiles                     " 
+"        URL: http://github.com/michaeljsmalley/dotfiles                     "
 "                                                                            "
 "                                                                            "
 " Sections:                                                                  "
@@ -76,7 +76,7 @@ endif
 " 04. Vim UI                                                                 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number                " show line numbers
-set numberwidth=6         " make the number gutter 6 characters wide
+set numberwidth=2         " make the number gutter 6 characters wide
 set cul                   " highlight current line
 set laststatus=2          " last window always has a statusline
 set nohlsearch            " Don't continue to highlight searched phrases.
@@ -111,10 +111,15 @@ nnoremap <C-j> <C-x>
 set pastetoggle=<F2>
 
 
-" Moving selection                                                                                                                                                              
+" Moving selection
 xmap <C-k> :mo'<-- <CR> gv
 xmap <C-j> :mo'>+ <CR> gv
 
+function! ScreencastMode()
+  GitGutterDisable
+  set numberwidth=1
+  set colorcolumn=810
+endfunction
 
 " Make Vim built-in explorer cool enough so I don't have to use NERDTree
 " Toggle Vexplore with Ctrl-E
