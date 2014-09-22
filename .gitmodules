@@ -5,7 +5,7 @@
 	path = vim/bundle/vim-rsi
 	url = https://github.com/tpope/vim-rsi.git
 [submodule "/home/nardi/dotfiles/vim/bundle/vim-airline"]
-	path = /home/nardi/dotfiles/vim/bundle/vim-airline
+	path = vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline.git
 [submodule "vim/bundle/vim-gitgutter"]
 	path = vim/bundle/vim-gitgutter
