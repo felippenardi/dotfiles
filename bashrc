@@ -33,7 +33,23 @@ export PS1="$GREENBOLD[\t]$GREEN \u@\h\[\033[00m\]:$BLUEBOLD\w\[\033[00m\] \\$ "
 prompt
 
 
-# Alias
+
+ #Alias
 alias dockercleancontainers="docker ps -a -notrunc| grep 'Exit' | awk '{print \$1}' | xargs -L 1 -r docker rm"
 alias dockercleanimages="docker images -a -notrunc | grep none | awk '{print \$3}' | xargs -L 1 -r docker rmi"
 alias dockerclean="dockercleancontainers && dockercleanimages"
+
+# Receive file from other computer
+function listen() {
+  if [ -z "$1" ]
+    then file="file"
+  else
+    file="$1"
+  fi
+  myip=`ifconfig eth0 2>/dev/null|awk '/inet addr:/ {print $2}'|sed 's/addr://'`
+  echo "==========================="
+  echo "Run on the other end:"
+  echo "$ nc $myip 5566 < $file"
+  echo "==========================="
+  nc -l 5566 > $file
+}
