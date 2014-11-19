@@ -154,3 +154,17 @@ set autochdir
 " Quick cycle to next and previous buffer
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <Tab> :bnext<CR>
+
+" Quick Rename
+function! RenameFile()
+let old_name = expand('%')
+let new_name = input('New file name: ', expand('%'), 'file')
+if new_name != '' && new_name != old_name
+    exec ':silent w'
+    exec ':silent !git mv ' . old_name . ' ' . new_name
+    exec ':silent e ' . new_name
+    exec ':silent bd ' . old_name
+    redraw!
+endif
+endfunction
+map <leader>n :call RenameFile()<cr>
