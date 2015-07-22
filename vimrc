@@ -161,11 +161,12 @@ nnoremap <Tab> gt
 
 " Quick Rename
 function! RenameFile()
-let old_name = expand('%')
-let new_name = input('New file name: ', expand('%'), 'file')
+let old_name = expand('%:p')
+let new_name = input('New file name: ', expand('%:p'), 'file')
 if new_name != '' && new_name != old_name
     exec ':silent w'
-    exec ':silent !git mv ' . old_name . ' ' . new_name
+    exec ':silent !mv ' . old_name . ' ' . new_name
+    exec ':silent !git rm ' . old_name
     exec ':silent e ' . new_name
     exec ':silent bd ' . old_name
     redraw!
