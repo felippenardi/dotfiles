@@ -50,9 +50,9 @@ set t_Co=256              " enable 256-color mode.
 syntax enable             " enable syntax highlighting (previously syntax on).
 colorscheme Tomorrow-Night-Eighties       " set colorscheme
 
-" Prettify JSON files
-autocmd BufRead,BufNewFile *.json set filetype=json
-autocmd Syntax json sou ~/.vim/syntax/json.vim
+" Prettify TODO files
+autocmd BufRead,BufNewFile *.todo set filetype=todo
+autocmd Syntax todo source ~/.vim/syntax/todo.vim
 
 " Prettify Vagrantfile
 autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
@@ -102,6 +102,12 @@ set nowrap                " don't wrap text
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 06. Custom Commands                                                        "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+nnoremap <ENTER> :w<ENTER>
+
+" Easily create boxy characters for '0, 1, 3' scale
+map ,m :s/0/▁/e<CR>:s/1/▅/e<CR>:s/3/▇/e<CR>:nohlsearch<cr>:echo <cr>
 
 " Easily increase and decrease next number with ctrl+k and ctrl+j
 nnoremap <C-k> <C-a>
