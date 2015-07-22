@@ -28,9 +28,15 @@ function prompt {
   local CYANBOLD="\[\033[1;36m\]"
   local WHITE="\[\033[0;37m\]"
   local WHITEBOLD="\[\033[1;37m\]"
-export PS1="$GREENBOLD[\t]$GREEN \u@\h\[\033[00m\]:$BLUEBOLD\w\[\033[00m\] \\$ "
+  export PS1="$GREENBOLD[\t]$GREEN \u@\h$WHITE:$BLUEBOLD\w$YELLOW\$(parse_git_branch)$WHITE \\$ "
 }
+# Git branch in prompt.
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+# Apply prompt setttings
 prompt
+
 
 
 
