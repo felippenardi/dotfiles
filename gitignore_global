@@ -2,6 +2,12 @@
 ###################
 *.todo
 *.wtf
+.demo*
+
+
+# Environment variables
+###################
+*.env
 
 # Ruby version. TODO remove it
 ###################
@@ -18,6 +24,7 @@
 # Vim files #
 ###################
 
+state.vim
 *.un~
 *.swp
 *.sw*
