@@ -22,6 +22,8 @@
 set nocompatible         " get rid of Vi compatibility mode. SET FIRST!
 let mapleader = ","      " change default leader key
 set history=1000         " Increase command history limit
+set splitbelow           " Create new horizontal windows below
+set splitright           " Create new horizontal windows to the right
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 02. Events                                                                 "
