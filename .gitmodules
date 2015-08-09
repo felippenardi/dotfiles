@@ -16,3 +16,6 @@
 [submodule "vim/bundle/taboo.vim"]
 	path = vim/bundle/taboo.vim
 	url = git://github.com/gcmt/taboo.vim.git
+[submodule "vim/bundle/vim-tmux-navigator"]
+	path = vim/bundle/vim-tmux-navigator
+	url = http://github.com/christoomey/vim-tmux-navigator.git
