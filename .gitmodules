@@ -19,3 +19,6 @@
 [submodule "vim/bundle/vim-tmux-navigator"]
 	path = vim/bundle/vim-tmux-navigator
 	url = http://github.com/christoomey/vim-tmux-navigator.git
+[submodule "vim/bundle/MatchTagAlways"]
+	path = vim/bundle/MatchTagAlways
+	url = https://github.com/Valloric/MatchTagAlways.git
