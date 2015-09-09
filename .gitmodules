@@ -25,3 +25,6 @@
 [submodule "vim/bundle/vim-pencil"]
 	path = vim/bundle/vim-pencil
 	url = https://github.com/reedes/vim-pencil.git
+[submodule "vim/bundle/vim-peekaboo"]
+	path = vim/bundle/vim-peekaboo
+	url = https://github.com/junegunn/vim-peekaboo.git
