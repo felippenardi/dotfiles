@@ -178,3 +178,6 @@ map <leader>n :call RenameFile()<cr>
 
 " Make Ctrl+P skip .gitignore files
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" Avoid mistakenly closing window when willing to cancel ctrl+w with a " ctrl+c
+map <c-w><c-c> <space>
