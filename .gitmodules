@@ -28,3 +28,6 @@
 [submodule "vim/bundle/vim-peekaboo"]
 	path = vim/bundle/vim-peekaboo
 	url = https://github.com/junegunn/vim-peekaboo.git
+[submodule "vim/bundle/targets.vim"]
+	path = vim/bundle/targets.vim
+	url = https://github.com/wellle/targets.vim.git
