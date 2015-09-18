@@ -42,3 +42,6 @@
 	path = vim/bundle/targets.vim
 	url = https://github.com/wellle/targets.vim.git
   ignore = dirty
+[submodule "vim/bundle/goyo"]
+	path = vim/bundle/goyo
+	url = https://github.com/junegunn/goyo.vim.git
