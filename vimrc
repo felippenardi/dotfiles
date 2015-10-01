@@ -181,3 +181,7 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 " Avoid mistakenly closing window when willing to cancel ctrl+w with a " ctrl+c
 map <c-w><c-c> <space>
+
+" Copy and paste between different vim instances
+map <leader>y :w! /tmp/vim-clipboard<cr>
+map <leader>p :r /tmp/vim-clipboard<cr>
