@@ -112,10 +112,6 @@ nnoremap <ENTER> :w<ENTER>
 " Easily create boxy characters for '0, 1, 3' scale
 map ,m :s/0/▁/e<CR>:s/1/▅/e<CR>:s/3/▇/e<CR>:nohlsearch<cr>:echo <cr>
 
-" Easily increase and decrease next number with ctrl+k and ctrl+j
-nnoremap <C-k> <C-a>
-nnoremap <C-j> <C-x>
-
 " Enable paste respecting identation
 set pastetoggle=<F2>
 
