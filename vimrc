@@ -50,7 +50,8 @@ autocmd BufNewFile,BufRead COMMIT_EDITMSG set spell
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set t_Co=256              " enable 256-color mode.
 syntax enable             " enable syntax highlighting (previously syntax on).
-colorscheme Tomorrow-Night-Eighties       " set colorscheme
+"colorscheme Tomorrow-Night-Eighties       " set colorscheme
+colorscheme Tomorrow                      " set colorscheme
 
 " Prettify TODO files
 autocmd BufRead,BufNewFile *.todo set filetype=todo
@@ -68,7 +69,7 @@ autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
 " Highlight characters that go over 80 columns (by drawing a border on the 81st)
 if exists('+colorcolumn')
   set colorcolumn=81
-  highlight ColorColumn ctermbg=red
+  highlight ColorColumn ctermbg=grey
 else
   highlight OverLength ctermbg=red ctermfg=white guibg=#592929
   match OverLength /\%81v.\+/
