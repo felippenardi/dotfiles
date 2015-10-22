@@ -1,4 +1,5 @@
 export TERM=xterm-256color
+export EDITOR=vim
 
 #Prompt and prompt colors
 # 30m - Black
