@@ -115,8 +115,13 @@ set autoindent            " auto-indent
 " 06. Custom Commands                                                        "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
+" Save file by hitting return
 nnoremap <ENTER> :w<ENTER>
+
+" Fold everything but last search:
+" 1. Perform a search
+" 2. Hit \z
+nnoremap \z :setlocal foldexpr=(getline(v:lnum)=~@/)?0:(getline(v:lnum-1)=~@/)\\|\\|(getline(v:lnum+1)=~@/)?1:2 foldmethod=expr foldlevel=0 foldcolumn=0<CR>
 
 " Easily create boxy characters for '0, 1, 3' scale
 map ,m :s/0/▁/e<CR>:s/1/▅/e<CR>:s/3/▇/e<CR>:nohlsearch<cr>:echo <cr>
