@@ -112,3 +112,6 @@ notify() {(ruby -e $String "$@" &) }
 # Make ctrl+p and ctrl+n behave like up/down arrow keys
 bindkey "^P" up-line-or-search
 bindkey "^N" down-line-or-search
+
+# Allow rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
