@@ -62,3 +62,6 @@ function listen() {
   echo "==========================="
   nc -l 5566 > $file
 }
+
+# Enable Grammarly on command line
+alias grammarly="open -a Grammarly"
