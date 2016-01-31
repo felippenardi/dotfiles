@@ -78,6 +78,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 04. Vim UI                                                                 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set scrolloff=5           " minimal number of lines before and after cursor
 set number                " show line numbers
 set numberwidth=2         " make the number gutter 6 characters wide
 set cul                   " highlight current line
