@@ -28,3 +28,5 @@
 	default = simple
 [url "https://github"]
 	insteadOf = git://github
+[init]
+	templatedir = ~/.git_template
