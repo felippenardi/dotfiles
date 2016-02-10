@@ -78,6 +78,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 04. Vim UI                                                                 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set scrolloff=5           " minimal number of lines before and after cursor
 set number                " show line numbers
 set numberwidth=2         " make the number gutter 6 characters wide
 set cul                   " highlight current line
@@ -88,6 +89,14 @@ set ruler                 " Always show info along bottom.
 set showmatch
 set visualbell
 let g:airline#extensions#tabline#enabled = 1 " Vim-airline smarter tab line
+
+" Make search results appear on the middle of the screen
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap g* g*zz
+nnoremap g# g#zz
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 05. Text Formatting/Layout                                                 "
@@ -106,8 +115,13 @@ set autoindent            " auto-indent
 " 06. Custom Commands                                                        "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
+" Save file by hitting return
 nnoremap <ENTER> :w<ENTER>
+
+" Fold everything but last search:
+" 1. Perform a search
+" 2. Hit \z
+nnoremap \z :setlocal foldexpr=(getline(v:lnum)=~@/)?0:(getline(v:lnum-1)=~@/)\\|\\|(getline(v:lnum+1)=~@/)?1:2 foldmethod=expr foldlevel=0 foldcolumn=0<CR>
 
 " Easily create boxy characters for '0, 1, 3' scale
 map ,m :s/0/▁/e<CR>:s/1/▅/e<CR>:s/3/▇/e<CR>:nohlsearch<cr>:echo <cr>
