@@ -42,3 +42,9 @@
 	path = vim/bundle/goyo
 	url = https://github.com/junegunn/goyo.vim.git
   ignore = dirty
+[submodule "vim/bundle/splitjoin.vim"]
+	path = vim/bundle/splitjoin.vim
+	url = https://github.com/AndrewRadev/splitjoin.vim
+[submodule "vim/bundle/switch.vim"]
+	path = vim/bundle/switch.vim
+	url = https://github.com/AndrewRadev/switch.vim
