@@ -116,7 +116,25 @@ set autoindent            " auto-indent
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Save file by hitting return
-nnoremap <ENTER> :w<ENTER>
+function! Save()
+  w
+  if g:bottom_pane_toggle
+    silent exec "!tmux send-keys -t bottom C-up C-m" | redraw!
+  endif
+endfunction
+nnoremap <ENTER> :silent exec "call Save()"<ENTER>
+
+" Toggle run last command on tmux bottom pane
+nnoremap <leader>q :call BottomPaneToggle()<cr>
+let g:bottom_pane_toggle = 0
+
+function! BottomPaneToggle()
+  if g:bottom_pane_toggle
+      let g:bottom_pane_toggle = 0
+  else
+      let g:bottom_pane_toggle = 1
+  endif
+endfunction
 
 " Fold everything but last search:
 " 1. Perform a search
